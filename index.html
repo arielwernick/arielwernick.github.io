@@ -323,6 +323,9 @@
     .tile-bookshelf { background: var(--dbx-orchid); grid-column: span 2; }
     .tile-bookshelf .tile-title { color: var(--on-orchid); }
 
+    .tile-substack { background: var(--dbx-tangerine); grid-column: span 2; }
+    .tile-substack .tile-title { color: var(--on-tangerine); }
+
     /* Tile scale-in animation */
     .tile {
       opacity: 0;
@@ -335,6 +338,8 @@
     .tile:nth-child(4) { animation-delay: 0.25s; }
     .tile:nth-child(5) { animation-delay: 0.3s; }
     .tile:nth-child(6) { animation-delay: 0.35s; }
+    .tile:nth-child(7) { animation-delay: 0.4s; }
+    .tile:nth-child(8) { animation-delay: 0.45s; }
 
     @keyframes tileReveal {
       from { opacity: 0; transform: scale(0.9); }
@@ -908,7 +913,7 @@
       .hero-svg { display: none; }
       .tile-grid { grid-template-columns: repeat(2, 1fr); }
       .tile-experience, .tile-projects { grid-row: span 1; min-height: 200px; }
-      .tile-skills, .tile-bookshelf { grid-column: span 1; }
+      .tile-skills, .tile-bookshelf, .tile-substack { grid-column: span 1; }
       .skills-grid { grid-template-columns: repeat(2, 1fr); }
       .stats-row { grid-template-columns: repeat(2, 1fr); }
       .contact-tiles { grid-template-columns: repeat(2, 1fr); }
@@ -953,6 +958,7 @@
       <a href="#projects">Projects</a>
       <a href="#education">Education</a>
       <a href="#bookshelf">Bookshelf</a>
+      <a href="#writing">Writing</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -1044,8 +1050,8 @@
         </div>
       </a>
 
-      <a href="https://virtualbookshelf.vercel.app" target="_blank" rel="noopener" class="tile tile-bookshelf">
-        <div class="tile-title">Virtual Bookshelf</div>
+      <a href="#bookshelf" class="tile tile-bookshelf">
+        <div class="tile-title">Ariel's 2025 Bookshelf</div>
         <div class="tile-visual">
           <svg width="100" height="60" viewBox="0 0 100 60" fill="none" stroke="var(--on-orchid)" stroke-width="2">
             <rect x="5" y="5" width="12" height="50" rx="2"/>
@@ -1053,6 +1059,15 @@
             <rect x="39" y="3" width="12" height="52" rx="2"/>
             <rect x="56" y="8" width="12" height="47" rx="2"/>
             <rect x="73" y="5" width="12" height="50" rx="2"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="https://arielwernick.substack.com" target="_blank" rel="noopener" class="tile tile-substack">
+        <div class="tile-title">Ariel's Writing</div>
+        <div class="tile-visual">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="var(--on-tangerine)" stroke-width="2">
+            <path d="M8 8h44"/><path d="M8 20h44"/><path d="M8 32l22 20 22-20"/>
           </svg>
         </div>
       </a>
@@ -1268,8 +1283,18 @@
     </div>
   </section>
 
+  <!-- WRITING -->
+  <section class="section section-light" id="writing">
+    <div class="reveal">
+      <div class="section-label">Writing</div>
+      <h2 class="section-title">Substack</h2>
+    </div>
+    <div class="reveal" style="max-width: 900px; width: 100%;">
+      <iframe src="https://arielwernick.substack.com" style="width: 100%; height: 600px; border: none; border-radius: 16px;" loading="lazy" title="Ariel's Substack"></iframe>
+    </div>
+  </section>
+
   <!-- CONTACT -->
-  <section class="section section-dark contact-section" id="contact">
     <div class="reveal">
       <div class="section-label">Connect</div>
       <h2 class="section-title">Let's Work<br>Together</h2>
