@@ -1280,7 +1280,17 @@
       <h2 class="section-title">Ariel's 2025<br>Bookshelf</h2>
     </div>
     <div class="reveal" style="width: calc(100% + 2 * var(--margin)); margin-left: calc(-1 * var(--margin));">
-      <iframe src="https://virtualbookshelf.vercel.app/s/36653963373365332d386337362d343931662d393365332d3134396638343266" style="width: 100%; height: 80vh; min-height: 600px; border: none; display: block;" loading="lazy" title="Ariel's 2025 Bookshelf"></iframe>
+      <iframe id="bookshelf-36653963" src="https://virtualbookshelf.vercel.app/embed/36653963373365332d386337362d343931662d393365332d3134396638343266?bg=transparent" width="100%" height="600" style="border:none;border-radius:8px;background:transparent;" title="Bookshelf" allowtransparency="true"></iframe>
+      <script>
+      (function(){
+        var f=document.getElementById('bookshelf-36653963');
+        window.addEventListener('message',function(e){
+          if(e.data&&e.data.type==='bookshelf-height'&&e.source===f.contentWindow){
+            f.style.height=e.data.height+'px';
+          }
+        });
+      })();
+      </script>
     </div>
   </section>
 
